@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85afdc03-eb31-467d-a985-fc52bec76449" name="Default Changelist" comment="" />
+    <list default="true" id="85afdc03-eb31-467d-a985-fc52bec76449" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,20 +107,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://F:/shpython11/Virtualenvs/ncdtc/Lib/site-packages/xadmin/plugins/importexport.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ncdtc/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+            <state relative-caret-position="231">
+              <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ncdtc/settings.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/videoproject.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1177">
-              <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+            <state relative-caret-position="87">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -139,6 +142,9 @@
       <find>SKIP_ADMIN_LOG</find>
       <find>get_admin_log</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -170,18 +176,20 @@
         <option value="$PROJECT_DIR$/main/views.py" />
         <option value="$PROJECT_DIR$/main/admin.py" />
         <option value="$PROJECT_DIR$/ncdtc/urls.py" />
-        <option value="$PROJECT_DIR$/ncdtc/settings.py" />
         <option value="$PROJECT_DIR$/main/adminx.py" />
         <option value="F:/shpython11/Virtualenvs/ncdtc/Lib/site-packages/xadmin/plugins/importexport.py" />
+        <option value="$PROJECT_DIR$/ncdtc/settings.py" />
+        <option value="$USER_HOME$/Desktop/videoproject.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-70" />
-    <option name="y" value="199" />
-    <option name="width" value="1675" />
-    <option name="height" value="622" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="555" />
+    <option name="y" value="123" />
+    <option name="width" value="1340" />
+    <option name="height" value="771" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -194,27 +202,6 @@
               <item name="ncdtc" type="b2602c69:ProjectViewProjectNode" />
               <item name="ncdtc" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ncdtc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ncdtc" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ncdtc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ncdtc" type="462c0819:PsiDirectoryNode" />
-              <item name="ncdtc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ncdtc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ncdtc" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ncdtc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ncdtc" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -224,6 +211,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="F:/shpython11/luffy_tea/luffyapi" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -296,24 +284,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611199614285</updated>
-      <workItem from="1611199618058" duration="49850000" />
+      <workItem from="1611199618058" duration="52846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49850000" />
+    <option name="totallyTimeSpent" value="52846000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="447" y="215" width="1340" height="771" extended-state="0" />
+    <frame x="555" y="123" width="1340" height="771" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.498998" visible="true" weight="0.30390626" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498998" visible="true" weight="0.30390626" />
       <window_info id="Structure" order="1" sideWeight="0.501002" side_tool="true" weight="0.14142092" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="manage.py@ncdtc" weight="0.42578548" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4016973" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.61912227" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3347779" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2503536" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -321,7 +309,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.37919825" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.45525903" />
       <window_info anchor="bottom" id="找到" order="11" weight="0.32956153" />
       <window_info active="true" anchor="bottom" id="运行" order="12" visible="true" weight="0.38048092" />
       <window_info anchor="bottom" id="调试" order="13" weight="0.46251768" />
@@ -600,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ncdtc/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -617,6 +598,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://F:/shpython11/Virtualenvs/ncdtc/Lib/site-packages/xadmin/plugins/importexport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-406">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ncdtc/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -624,10 +612,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/shpython11/Virtualenvs/ncdtc/Lib/site-packages/xadmin/plugins/importexport.py">
+    <entry file="file://$PROJECT_DIR$/ncdtc/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/videoproject.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/videoproject.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
