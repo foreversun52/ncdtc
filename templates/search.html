@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/static/search/content.css">
+</head>
+<body>
+	<div id="content">
+		<form action="{% url 'search' %}" method="post">
+			<div id="search">
+				<table width="100%">
+					<tbody><tr>
+						<td>Users can search all entries in three ways: by <font color="#0000EE"><u>ncRNA</u></font>, by <font color="#0000EE"><u>drug
+							</u></font> or by <font color="#0000EE"><u>cancer</u></font>.
+						</td>
+					</tr>
+					<tr>
+						<td>Detailed information shown in search results:</td>
+					</tr>
+					<tr>
+						<td>
+							<fieldset>
+								<legend>ncRNA information </legend>
+								<center>ncRNA ID, ncRNA Database, ncRNA name, ncRNA
+									type, ncRNA expression, ncRNA method for ncRNA expression</center>
+							</fieldset>
+							<fieldset>
+								<legend>drug information </legend>
+								<center>drug id, drug name, drug method, drug response,
+									drug target</center>
+							</fieldset>
+							<fieldset>
+								<legend>disease information </legend>
+								<center>cancer, tissue and/ or cell line</center>
+							</fieldset>
+							<fieldset>
+								<legend>other information </legend>
+								<center>article title, journal, published time, PubMed
+									ID</center>
+							</fieldset>
+						</td>
+					</tr>
+					<tr>
+						<th align="center"><a href="{% url 'search_by_ncrna' %}"><img src="/static/search/search_by_ncRNA2.jpg" onmouseover="this.src='/static/search/search_by_ncRNA1.jpg'" onmouseout="this.src='/static/search/search_by_ncRNA2.jpg'" border="0" width="600"></a></th>
+					</tr>
+					<tr>
+						<th align="center"><a href="{% url 'search_by_drug' %}"><img src="/static/search/search_by_drug2.jpg" onmouseover="this.src='/static/search/search_by_drug1.jpg'" onmouseout="this.src='/static/search/search_by_drug2.jpg'" border="0" width="600"></a></th>
+					</tr>
+					<tr>
+						<th align="center"><a href="{% url 'search_by_cancer' %}"><img src="/static/search/search_by_cancer2.jpg" onmouseover="this.src='/static/search/search_by_cancer1.jpg'" onmouseout="this.src='/static/search/search_by_cancer2.jpg'" border="0" width="600"></a></th>
+					</tr>
+				</tbody></table>
+			</div>
+		</form>
+	</div>
+
+</body></html>

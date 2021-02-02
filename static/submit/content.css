@@ -1,0 +1,323 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	font-size: 16px;
+}
+
+dt, dd {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	margin: 0 0 10px 0;
+}
+
+p {
+	text-indent: 24px;
+	line-height: 24px;
+	margin: 5px 0 5px 0;
+}
+
+a {
+	color: #0000EE;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* logo.jsp start*/
+#logo {
+	font-style: italic;
+	font-family: Georgia;
+	font-size: 24px;
+	height: 50px;
+}
+
+#logo a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#logo a .logo_colour {
+	color: #FFC104;
+}
+/* logo.jsp end */
+
+/* menu.jsp start */
+#menu {
+	font-family: Georgia;
+	background: #4060b9;
+	height: 45px;
+}
+
+#menu a {
+	height: 40px;
+	color: #000;
+	line-height: 40px;
+	text-decoration: none;
+	padding: 10px 10px 10px 10px;
+}
+
+#menu a:hover {
+	color:#fff;
+	cursor: pointer;
+}
+
+#menu .active {
+	color:#fff;
+	cursor: pointer;
+}
+/* menu.jsp end */
+
+/* home.jsp end */
+#content {
+	font-size: 14px;
+	background-color: #ffffff;
+	border:1px solid #797979;
+}
+
+#home {
+	font-size: 17px;
+	padding: 10px;
+	text-align: justify;
+}
+
+#home a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#home a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#home h1 {
+	font: normal 120% Arial, Helvetica, sans-serif;
+	margin: 0 0 5px 0;
+	padding: 5px 0 5px 0;
+	color: #222;
+}
+
+#home h2 {
+	font: normal 120% Arial, Helvetica, sans-serif;
+	margin: 0 0 5px 0;
+	padding: 5px 0 5px 0;
+	color: #222;
+}
+
+#home .tagBall {
+	width: 300px;
+	height: 270px;
+	position: relative;
+}
+
+#home .tag {
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: #000;
+	text-decoration: none;
+	font-size: 5px;
+	font-weight: bold;
+}
+
+#home .tag:hover {
+	border: 0px solid #666;
+}
+
+#home #right p {
+	text-indent: 0px;
+	margin-left: 20px;
+	line-height: 20px;
+}
+
+#home #right td {
+	padding-bottom: 10px;
+}
+
+#home li {
+	line-height: 20px;
+	margin: 0px 5px 0 15px;
+}
+/* home.jsp end */
+/* search.jsp start*/
+#search {
+	line-height: 20px;
+	padding: 30px 100px;
+}
+
+#search table th, #search table th td {
+	padding: 5px;
+}
+
+#search fieldset {
+	margin: 10px 20px;
+}
+
+/* browse start*/
+#browse {
+	margin: 10px;
+	text-align: justify;
+	height: 604px;
+}
+/* browse end*/
+/* browse_result start*/
+#browse_result {
+	font-size: 14px;
+	margin: 10px;
+	height: 584px;
+	overflow-y: auto;
+}
+
+#browse_result table {
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+#browse_result table td {
+	padding: 5px;
+}
+/* browse_result end*/
+/*browse_result details start*/
+#browse_result_details {
+	margin: 10px;
+	overflow-y: auto;
+	text-align: justify;
+	height: 564px;
+}
+
+#browse_result_details table td {
+	padding: 3px 0;
+}
+/*browse_result details end*/
+/*search_by_circRNA start*/
+#search_by table {
+	padding: 30px 100px;
+}
+
+#search_by a {
+	color: #0000EE;
+}
+/*search_by_circRNA end*/
+/* search_result start*/
+#search_result {
+	margin: 10px;
+	height: 584px;
+}
+
+#search_result #head a {
+	color: #0000EE;
+}
+
+#search_result_table {
+	margin: 0 auto;
+	width: 90%;
+	height: 524px;
+	overflow-y: auto;
+}
+
+#search_result_table table {
+	border: 1px solid #ddd;
+}
+
+#search_result table td {
+	padding: 5px;
+}
+/* search_result end*/
+
+/*search_result details start*/
+#search_result_details {
+	margin: 20px 10px;
+	height: 584px;
+	overflow-y: auto;
+}
+
+#search_result_details table td {
+	padding: 3px 0;
+}
+/*search_result details end*/
+#download {
+	padding: 30px 100px;
+}
+
+#download table td {
+	padding: 5px;
+}
+
+#download h2 {
+	padding: 0px;
+	margin:0px;
+}
+
+#submit {
+	padding: 30px 100px;
+}
+
+#submit table {
+	padding: 8px;
+}
+
+#submit table td {
+	padding: 8px 8px 8px 0;
+}
+
+#submit select option {
+	padding: 10px;
+}
+
+#help {
+	padding: 10px;
+	text-align: justify;
+	height: 520px;
+	overflow-y: auto;
+	width: 93%;
+	margin: 30px auto;
+	background-color: #eee;
+	border: 1px solid #ddd;
+}
+
+#help h1 {
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	margin: 5px 0 0 0;
+	padding: 5px 0 5px 0;
+	font-size: 20px;
+}
+
+#help h2 {
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	margin: 5px 0 0 0;
+	padding: 5px 0 5px 0;
+	font-size: 16px;
+}
+
+#help li {
+	line-height: 20px;
+	margin: 5px 5px 5px 15px;
+}
+
+#help a {
+	color: #0000EE;
+}
+
+#bottom {
+	color:#fff;
+	font-size: 15px;
+	padding: 15px;
+	text-align: justify;
+	background-color: #4060b9;
+}
+
+#bottom p {
+	text-indent: 0px;
+	line-height: 20px;
+	margin: 5px 0 5px 0;
+}
+
+#wait {
+	padding: 10px;
+}

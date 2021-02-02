@@ -1,0 +1,24 @@
+ul.images {
+	height: 280px;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+ul.images li {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	right: 0;
+	list-style: none;
+}
+
+ul.images li.show {
+	z-index: 500;
+}
+
+ul img {
+	border: none;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/static/submit/content.css">
+<script>
+    {% if back_msg == 1 %}
+        alert('提交成功');
+        {% elif back_msg == 0 %}
+        alert('提交失败');
+    {% endif %}
+	function validate() {
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if (upform.ncRNA_name.value == "") {
+			alert("ncRNA Name can't be empty!");
+			return;
+		}
+		if (upform.ncRNA_id.value == "") {
+			alert("ncRNA ID can't be empty!");
+			return;
+		}
+		if (upform.disease.value == "") {
+			alert("Disease can't be empty!");
+			return;
+		}
+		if (upform.pmid.value == "") {
+			alert("PubMed ID can't be empty!");
+			return;
+		}
+		if (upform.expression_pattern.value == "") {
+			alert("Expression Pattern can't be empty!");
+			return;
+		}
+		if (upform.description.value == "") {
+			alert("Description can't be empty!");
+			return;
+		}
+		if (upform.email.value == "") {
+			alert("Your mail can't be empty!");
+			return;
+		}
+		if (!upform.email.value.match(filter)) {
+			alert("Your mail format error!");
+			return;
+		}
+		if (confirm("Decide to submit?")) {
+			document.upform.submit();
+		}
+	}
+</script>
+
+</head>
+<body>
+	<div id="content">
+		<div id="submit">
+			<form name="upform" id="upform" method="post" action="{% url 'submit' %}">
+                {% csrf_token %}
+				<table width="90%" align="center">
+					<tbody><tr>
+						<td>Welcome to submit new entries to the database.</td>
+					</tr>
+				</tbody></table>
+				<table width="90%" bgcolor="#D7D7D7" align="center">
+					<tbody><tr>
+						<td width="20%" align="right">ncRNA Name: <font color="red"><b>*</b></font>
+						</td>
+						<td width="30%"><input type="text" name="ncRNA_name" id="ncRNA_name" style="width: 180px; padding: 5px 10px;"></td>
+						<td width="20%" align="right">ncRNA ID: <font color="red"><b>*</b></font>
+						</td>
+						<td width="30%"><input type="text" name="ncRNA_id" id="ncRNA_id" style="width: 180px; padding: 5px 10px;"></td>
+
+						<td width="20%" align="right">Disease: <font color="red"><b>*</b></font>
+						</td>
+						<td><input type="text" name="disease" id="disease" style="width: 180px; padding: 5px 10px;"></td>
+					</tr>
+					<tr>
+						<td align="right">Drug Name: <font color="red"></font>
+						</td>
+						<td><input type="text" name="drug_name" id="drug_name" style="width: 180px; padding: 5px 10px;"></td>
+						<td align="right">Drug ID: <font color="red"></font>
+						</td>
+						<td><input type="text" name="drug_id" id="drug_id" style="width: 180px; padding: 5px 10px;"></td>
+
+						<td align="right">Drug Response: <font color="red"></font>
+						</td>
+						<td><input type="text" name="drug_response" id="drug_response" style="width: 180px; padding: 5px 10px;"></td>
+					</tr>
+
+					<tr>
+						<td align="right">Expression pattern: <font color="red"><b>*</b></font>
+						</td>
+						<td><select name="expression_pattern" id="expression_pattern" style="width: 205px; height: 30px; padding: 5px 10px;"><option value="up_regulated">up-regulated</option>
+								<option value="down_regulated">down-regulated</option>
+								<option value="unknown">unknown</option></select></td>
+						<td align="right">PubMed ID: <font color="red"><b>*</b></font>
+						</td>
+						<td><input type="text" name="pmid" id="pmid" style="width: 180px; padding: 5px 10px;"></td>
+						<td align="right">Email: <font color="red"><b>*</b></font>
+						</td>
+						<td><input type="text" name="email" id="email" style="width: 180px; padding: 5px 10px;"></td>
+					</tr>
+					<tr>
+						<td align="right">Description: <font color="red"><b>*</b></font>
+						</td>
+						<td colspan="5"><textarea cols="33" name="description" id="description" style="width: 710px; height: 100px; padding: 5px 10px;"></textarea></td>
+
+					</tr>
+					<tr>
+						<td align="center" colspan="4"><input type="button" value="submit" onclick="validate()"></td>
+
+
+					</tr>
+				</tbody></table>
+			</form>
+		</div>
+	</div>
+
+</body></html>

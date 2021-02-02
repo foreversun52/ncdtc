@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Insert title here</title>
+    <link rel="stylesheet" type="text/css" href="/static/browse/content.css">
+    <link rel="stylesheet" href="/static/browse/demo.css" type="text/css">
+    <link rel="stylesheet" href="/static/browse/zTreeStyle.css" type="text/css">
+    <script type="text/javascript">
+        //获取浏览器页面可见高度和宽度
+var _PageHeight = document.documentElement.clientHeight,
+    _PageWidth = document.documentElement.clientWidth;
+//计算loading框距离顶部和左部的距离（loading框的宽度为215px，高度为61px）
+var _LoadingTop = _PageHeight > 61 ? (_PageHeight - 61) / 2 : 0,
+    _LoadingLeft = _PageWidth > 215 ? (_PageWidth - 215) / 2 : 0;
+//在页面未加载完毕之前显示的loading Html自定义内容
+var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#f3f8ff;opacity:0.8;filter:alpha(opacity=80);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 57px; line-height: 57px; padding-left: 50px; padding-right: 5px; background: #fff url(/static/browse/loading.gif) no-repeat scroll 5px 10px; border: 2px solid #95B8E7; color: #696969; font-family:\'Microsoft YaHei\';">数据加载中，请等待...   </div></div>';
+//呈现loading效果
+document.write(_LoadingHtml);
+
+
+//监听加载状态改变
+document.onreadystatechange = completeLoading;
+
+//加载状态为complete时移除loading效果
+function completeLoading() {
+    if (document.readyState == "complete") {
+        var loadingMask = document.getElementById('loadingDiv');
+        loadingMask.parentNode.removeChild(loadingMask);
+    }
+}
+    </script>
+</head>
+<body>
+<div id="content">
+    <div id="wait" style="display: none;">
+        <table width="100%">
+            <tbody>
+            <tr>
+                <td>loading, please wait patiently...<br> <img src="/static/browse/loading.gif" ></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <script type="text/javascript" src="/static/browse/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="/static/browse/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="/static/browse/jquery.ztree.excheck-3.5.js"></script>
+    <script type="text/javascript" src="/static/browse/jquery.ztree.exedit-3.5.js"></script>
+    <script type="text/javascript">
+        $("#wait").css('display', 'none');
+        var IDMark_Switch = "_switch", IDMark_Icon = "_ico", IDMark_Span = "_span", IDMark_Input = "_input",
+            IDMark_Check = "_check", IDMark_Edit = "_edit", IDMark_Remove = "_remove", IDMark_Ul = "_ul",
+            IDMark_A = "_a";
+        var setting = {
+            view: {
+                addHoverDom: addHoverDom,
+                removeHoverDom: removeHoverDom
+            }
+        };
+
+        var zNodes = [{
+            name: "ALL",
+            open: true,
+            children: [
+                {
+                    name: "ncRNAs",
+                    children: [
+                        {
+                            name: "ncRNA ID",
+                            children: [
+                                {% for ncrnd in ncrnd_id_list %}
+                                {
+                                id: '{{ ncrnd.ncrna_id }}',
+                                name: '{{ ncrnd.ncrna_id }}',
+                                target: 'rightbar',
+                                url: '{% url 'browse_result' 'ncrna_id' %}?id={{ ncrnd.ncrna_id }}'
+                            },
+                                {% endfor %}
+
+                            ],
+
+                        },
+                        {
+                            name: "ncRNA Name",
+                            children: [
+
+                                {% for ncrnd_name in ncrnd_name_list %}
+                                {
+                                    id: '{{ ncrnd_name.ncrna_name }}',
+                                    name: '{{ ncrnd_name.ncrna_name }}',
+                                    target: 'rightbar',
+                                    url: '{% url 'browse_result' 'ncrna_name' %}?id={{ ncrnd_name.ncrna_name }}'
+                                },
+                                {% endfor %}
+
+                            ]
+                        },],},
+                        {
+                            name: "Drugs",
+                            children: [
+                                {
+                                    name: "Drug ID",
+                                    children: [
+                                        {% for drug_id in drug_id_list %}
+                                        {
+                                            id: '{{ drug_id.drug_id }}',
+                                            name: '{{ drug_id.drug_id }}',
+                                            target: 'rightbar',
+                                            url: '{% url 'browse_result' 'drug_id' %}?id={{ drug_id.drug_id }}'
+                                        },
+                                        {% endfor %}
+
+                                        ]
+                                },
+                                {
+                                    name: "Drug Name",
+                                    children: [
+                                        {% for drug_name in drug_name_list %}
+                                        {
+                                            id: '{{ drug_name.drug_name }}',
+                                            name: '{{ drug_name.drug_name }}',
+                                            target: 'rightbar',
+                                            url: '{% url 'browse_result' 'drug_name' %}?id={{ drug_name.drug_name }}'
+                                        },
+                                        {% endfor %}
+                                    ]
+                                }]
+                        },
+                        {
+                            name: "Cancer Type",
+                            children: [
+                                {% for cancer_type in cancer_type_list %}
+                                        {
+                                            id: '{{ cancer_type.cancer_type }}',
+                                            name: '{{ cancer_type.cancer_type }}',
+                                            target: 'rightbar',
+                                            url: '{% url 'browse_result' 'cancer_type' %}?id={{ cancer_type.cancer_type }}'
+                                        },
+                                        {% endfor %}
+                                ]
+                        }]
+                }];
+
+        function addHoverDom(treeId, treeNode) {
+            var aObj = $("#" + treeNode.tId + IDMark_A);
+            if (treeNode.id != null) {
+                if ($("#diyBtn1_" + treeNode.id).length > 0)
+                    return;
+
+            }
+        }
+
+        function removeHoverDom(treeId, treeNode) {
+            if (treeNode.id != null) {
+                $("#diyBtn1_" + treeNode.id).unbind().remove();
+            }
+        }
+
+        function send(list) {
+            if (list != "") {
+                document.form1.action = 'tools.jsp?list=' + list;
+                document.form1.submit();
+            }
+        }
+
+        $(document).ready(function () {
+            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+
+        function show(region) {
+            document.getElementById(region).style.display = 'block';
+        }
+
+        function hid(region) {
+            document.getElementById(region).style.display = 'none';
+        }
+    </script>
+
+    <div id="browse">
+        <table width="100%">
+            <tbody>
+            <tr>
+                <td width="25%" valign="top" style="border-right: 1px solid #ddd;">
+                    <ul id="treeDemo" class="ztree">
+                    </ul>
+                </td>
+                <td width="1%"></td>
+                <td valign="top">
+                    <iframe src="{% url 'browse_result' '0' %}" name="rightbar" height="584" width="98%"
+                            scrolling="NO" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>

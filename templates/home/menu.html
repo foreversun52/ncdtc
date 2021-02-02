@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/static/index/content.css">
+<script src="/static/index/jquery.min.js"></script>
+<script src="/static/index/docs.js"></script>
+
+</head>
+<body marginwidth="0" marginheight="0" style="">
+	<div id="menu">
+		<table border="0" width="95%" align="center">
+			<tbody><tr>
+				<td><a href="{% url 'home' %}" target="main" class="active">Home</a> <a href="{% url 'browse' %}" target="main">Browse</a> <a href="{% url 'search' %}" target="main">Search</a> <a href="{% url 'download' %}" target="main">Download</a>
+					<a href="{% url 'submit' %}" target="main">Submit</a> <a href="{% url 'help' %}" target="main">Help</a></td>
+			</tr>
+		</tbody></table>
+	</div>
+
+
+</body></html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0044)http://www.ncdtcdb.cn:8080/search_result.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="/static/search_result/content.css">
+</head>
+<body>
+	<div id="content">
+		<div id="search_result">
+
+			<table width="90%" align="center" id="head">
+				<tbody><tr>
+					<td colspan="6"><a href="{% url 'home' %}">Home</a> &gt; <a href="{% url 'search' %}">Search</a> &gt; {% if key == 'ncrna' %}
+					<a href="{% url 'search_by_ncrna' %}">Search by ncRNA</a>
+                        {% elif key == 'drug' %}<a href="{% url 'search_by_drug' %}">Search by drug</a>
+                        {% elif key == 'cancer' %}<a href="{% url 'search_by_cancer' %}">Search by cancer</a>
+					{% endif %} &gt; Result</td>
+					<td align="right"><input type="button" name="Submit" onclick="javascript:history.back(-1);" value="Back"></td>
+				</tr>
+				<tr>
+					<td colspan="7">search option: [ <font color="#0000EE">{{ key }} like %{{ values }}%</font> ]
+					</td>
+				</tr>
+			</tbody></table>
+			<div id="search_result_table">
+				<table width="100%" align="center">
+
+					<tbody><tr>
+						<td bgcolor="#eee"><font color="#0000EE"><b>ncRNA_id</b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>ncRNA_name</b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>drug_id</b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>drug_name
+							</b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>cancer</b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>drug
+									response </b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>PMID</b></font></td>
+						<td bgcolor="#eee"><font color="#0000EE"><b>details</b></font></td>
+					</tr>
+                    {% for res in search_results %}
+                        <tr>
+<td bgcolor="#89D9B5">{{ res.ncrna_id }}</td>
+<td bgcolor="#89D9B5"><font color="red">{{ res.ncrna_name }}</font></td>
+<td bgcolor="#89D9B5">{{ res.drug_id }}</td>
+<td bgcolor="#89D9B5">{{ res.drug_name }}</td>
+<td bgcolor="#89D9B5">{{ res.cancer_type }}</td>
+<td bgcolor="#89D9B5">{{ res.sensitive_or_resistant }}</td>
+<td bgcolor="#89D9B5"><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term={{ res.pmid }}" target="_blank">{{ res.pmid }}</a></td>
+<td bgcolor="#89D9B5"><a href="{% url 'search_result_details' res.id %}">more...</a></td>
+</tr>
+                    {% endfor %}
+
+
+
+
+
+				</tbody></table>
+			</div>
+
+		</div>
+	</div>
+
+</body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0046)http://www.ncdtcdb.cn:8080/search_by_ncRNA.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/static/search_by/content.css">
+<link rel="stylesheet" type="text/css" href="/static/search_by/images.css">
+<script type="text/javascript" src="/static/search_by/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/static/search_by/jquery-latest.js"></script>
+<link type="text/css" rel="stylesheet" href="/static/search_by/combine1.css">
+<script type="text/javascript" src="/static/search_by/jquery.autocomplete.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+	    var ncRNA = [
+            {% for ncrnd_name in ncrnd_name_list %}
+                {name:'',to:'{{ncrnd_name.ncrna_name}}'},
+            {% endfor %}
+        ];
+
+		$("#ncRNA").autocomplete(
+				ncRNA,
+				{
+					width : 250,
+					matchContains : true,
+					formatItem : function(data, i, max) {
+						return data.name + " <font color='#20b20b'>[" + data.to
+								+ "]</font>";
+					},
+					formatMatch : function(data, i, max) {
+						return data.name + " " + data.to;
+					},
+					formatResult : function(data) {
+						return data.to;
+					}
+				});
+	});
+</script>
+
+</head>
+<body>
+	<div id="content">
+		<div id="search_by">
+			<form action="{% url 'search_result' 'ncRNA' %}" method="get">
+				<table width="100%">
+					<tbody><tr>
+						<td align="right"><input type="button" name="Submit" onclick="javascript:history.back(-1);" value="Back"></td>
+					</tr>
+					<tr>
+						<td align="center"><font color="#747474">ncRNA</font></td>
+
+					</tr>
+					<tr>
+						<td align="center"><input type="text" style="width: 300px; padding: 5px;" id="ncRNA" name="ncRNA" class="ele ac_input" autocomplete="off"> <input type="submit" value="search" style="padding: 5px;"></td>
+					</tr>
+					<tr>
+						<td align="center"><font color="#2CBC7E">Query
+								examples:</font> <i><font color="#747474">ncRNA:</font><a href="{% url 'search_result' 'ncRNA' %}?ncRNA=miR-181d">miR-181d</a>, <a href="{% url 'search_result' 'ncRNA' %}?ncRNA=HOTAIR">HOTAIR</a>, <a href="{% url 'search_result' 'ncRNA' %}?ncRNA=ABCC6P1">ABCC6P1</a></i></td>
+					</tr>
+					<tr>
+						<td align="center"><br>Click <a href="{% url 'search' %}">here</a>
+							to get back to search page.</td>
+					</tr>
+				</tbody></table>
+			</form>
+		</div>
+	</div>
+
+</body></html>

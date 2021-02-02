@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/static/help/content.css">
+</head>
+<body>
+	<div id="content">
+		<div id="help">
+			<table width="98%" align="center">
+				<tbody><tr>
+					<td align="center"><h1>NoncoRNA Tutorial</h1></td>
+				</tr>
+				<tr>
+					<td align="center"><h2>Sep. 2019</h2></td>
+				</tr>
+				<tr>
+					<td>
+						<h2>[1] Overview</h2>
+						<p></p>
+					</td>
+				</tr>
+				<tr>
+					<td><p>Non-coding RNAs refer to RNAs that do not encode
+							proteins. But they pay important roles in cellular functions, and
+							their deregulation are associated with a variety of human
+							diseases, including neurodegenerative diseases and cancers.
+							Substantial research is going on to reveal the functions of
+							ncRNAs in drug resistant. To collect and annotate these data, we
+							developed NoncoRNA, a manually curated database of experimentally
+							supported non-coding RNA and drug target associations in cancer.
+							Current version contains 5,568 ncRNAs and 154 drugs in 134 cancers.
+							Each entry in the NoncoRNA contains detailed information on
+							ncRNAs, drug, cancer, and other information.</p></td>
+				</tr>
+
+				<tr>
+					<td>
+						<p>The overview of the database is as followings:</p>
+						<img src="/static/help/workflow.jpg" width="900"><br>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<h2>[2] Browse</h2>
+						<p>To browse ncRNA-drug-cancer association data in the
+							database, please select the menu "Browse" (Figure 1). Users can
+							browse all entries in two ways: by ncRNA, by cancer or by drug.
+							Take a browse "glioma"-related ncRNAs as an example. To browse
+							the entries for glioma, please click "Cancer" and select the
+							"glioma" option. The browse result will be displayed in the right
+							panel.</p>
+						<p>
+							<img src="/static/help/help1.jpg" width="900">
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2>[3] Search</h2>
+						<p>
+							To search data in the database, please select the menu "<a href="{% url 'search' %}">Search</a>".
+						</p>
+						<p>
+							In the NoncoRNA database, users can search all entries in three
+							ways: <a href="{% url 'search_by_ncrna' %}">search by ncRNA</a>, <a href="{% url 'search_by_drug' %}">search by drug</a> or <a href="{% url 'search_by_cancer' %}">search by cancer</a>. Detailed
+							information shown in search results:
+						</p>
+						<ul>
+							<li><u>ncRNA information</u>: ncRNA, detection method for
+								ncRNA expression, ncRNA expression pattern, associator, host
+								gene.</li>
+							<li><u>cancer information</u>: cancer, species, tissue
+								and/or cell line, a brief description of the ncRNA-drug target
+								relationship in cancer.</li>
+							<li><u>other information</u>: article title, journal,
+								published time, PubMed ID.</li>
+
+						</ul>
+
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<h2>[4] Download</h2>
+						<p>
+							To download data in the database, please select the menu "<a href="{% url 'download' %}">Download</a>". The NoncoRNA provides two
+							formats of downloadable file in TEXT and Excel formats,
+							respectively.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2>[5] Submit</h2>
+						<p>
+							To submit data in the database, please select the menu "<a href="{% url 'submit' %}">Submit</a>". We will also encourage research
+							scientists to submit the experimentally supported
+							ncRNA-drug-cancer association. The users need to input their data
+							into corresponding blanks and then submit the query. The
+							submitted information in the future will be manually reviewed and
+							then integrated into this database.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h2>[5] Question and Answer</h2>
+						<p>
+							If you have any questions, suggestions and comments, please feel
+							free to contact Dr. Jiang at <a href="mailto:xxxx@163.com?subject=Help%20with%20the%20NoncoRNA">xxxx@163.com</a>
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td><p></p></td>
+				</tr>
+			</tbody></table>
+
+		</div>
+	</div>
+
+</body></html>

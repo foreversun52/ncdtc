@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/static/index/content.css">
+<link rel="stylesheet" type="text/css" href="/static/index/style.css">
+</head>
+<body marginwidth="0" marginheight="0">
+	<div id="content">
+		<div id="home">
+			<table width="98%" align="center">
+				<tbody><tr>
+					<td width="68%" valign="top">
+						<h1>
+							Welcome to <font color="#A65628">NoncoRNA</font>
+						</h1>
+						<p>NoncoRNA: a database for experimentally supported
+							Non-Coding RNA and Drug Target associations in Cancer. Cancer is
+							an important cause of morbidity and mortality worldwide, in every
+							world region, and irrespective of the level of human development.
+							In addition, the incidence and mortality of cancer have increased
+							rapidly worldwide in recent years. The reasons are complex, but
+							drug resistance is the primary cause of clinical treatment
+							failure. However, the mechanism of drug resistant to
+							chemotherapeutic agents are not fully elucidated. Currently, more
+							and more evidences have been proved that non-coding RNAs play
+							critical roles in drug resistant. Whereas, the database
+							association with drug resistant are only little. In addition, the
+							information are incomprehensive.</p>
+						<p>To fill this gap, we have developed NoncoRNA, a manually
+							curated database of experimentally supported non-coding RNA and
+							drug target associations in cancer. The current version of
+							NoncoRNA contains 5,568 ncRNAs and 154 drugs in 134 cancers.</p>
+						<table width="100%">
+							<tbody><tr>
+								<td width="55%">
+									<div class="gallery">
+										<ul class="images">
+											<li class="" style="opacity: 0;"><img height="270" src="/static/index/workflow1.jpg" alt="photo_one"></li>
+											<li class="" style="opacity: 0.234744;"><img height="270" src="/static/index/workflow1.jpg" alt="photo_one"></li>
+											<li class="show" style="opacity: 0.765256;"><img height="270" src="/static/index/2.jpg" alt="photo_two"></li>
+											<li style="opacity: 0;"><img height="270" src="/static/index/3.jpg" alt="photo_three"></li>
+										<li id="slideshow-caption" class="caption" style="opacity: 0;"><div class="slideshow-caption-container"><p></p></div></li></ul>
+									</div>
+								</td>
+								<td valign="top"><p>The feather of NoncoRNA including
+										the following aspects:(1) The NoncoRNA is the first database
+										that contains multiple ncRNAs, such as lncRNA, miRNA, circRNA
+										and piRNA; (2) The NoncoRNA is the first database provides the
+										relationship between circRNA, piRNA and drug resistant in
+										cancer; (3) The NoncoRNA provides some relationship between
+										ncRNAs and drug resistant in cancer.</p>
+									<p>
+										We highly recommend Google Chrome or Safari browser to have a
+										better experience on NoncoRNA.
+{#										<iframe style="background:transparent !important" scrolling="no" frameborder="0" allowtransparency="true" width="103" height="18" src="./c2.html"></iframe><script type="text/javascript" src="/static/index/3.js" async="async"></script>#}
+									</p></td>
+
+							</tr>
+						</tbody></table>
+
+					</td>
+
+					<td width="2%"></td>
+					<td valign="top"><div id="right">
+							<table width="100%">
+								<tbody><tr>
+									<td><i>Latest News</i>
+										<p>
+											Feb. 28, 2020 - <a href="https://jhoonline.biomedcentral.com/articles/10.1186/s13045-020-00849-7" target="__blank">The article of NoncoRNA is published
+												online in the Journal of Hematology &amp; Oncology</a>.
+										</p>
+										<p>Sep. 3, 2019 - The website started to build</p></td>
+								</tr>
+								<tr>
+									<td><i>Statistics</i>
+										<ul>
+											<li>ncRNA: {{ ncRNA_count }}</li>
+											<li>drug: {{ drug_count }}</li>
+											<li>cancer: {{ cancer_count }}</li>
+										</ul></td>
+								</tr>
+
+								<tr>
+									<td><i>Quick Search</i>
+										<center>
+											<div class="tagBall">
+												<a class="tag" target="main" href="{% url 'search_result' 'ncRNA' %}?ncRNA=ABCC6P1" style="color: rgb(91, 109, 215); font-size: 8.93664px; opacity: 0.872512; z-index: 89; left: 213.407px; top: 227.852px;">ABCC6P1</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'ncRNA' %}?ncRNA=miR-200" style="color: rgb(202, 132, 164); font-size: 7.92203px; opacity: 0.718961; z-index: 79; left: 242.257px; top: 130.825px;">miR-200</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'ncRNA' %}?ncRNA=NR_003319" style="color: rgb(168, 183, 192); font-size: 6.84186px; opacity: 0.505438; z-index: 68; left: 133.835px; top: 141.163px;">NR_003319</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'ncRNA' %}?ncRNA=NR_003319" style="color: rgb(55, 36, 55); font-size: 7.76226px; opacity: 0.691124; z-index: 77; left: 69.3578px; top: 226.764px;">NR_003319</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'ncRNA' %}?ncRNA=NR_003319" style="color: rgb(198, 109, 208); font-size: 10.7477px; opacity: 1.07454; z-index: 107; left: 105.829px; top: 265.943px;">NR_003319</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'drug' %}?drug=temozolomide" style="color: rgb(194, 97, 136); font-size: 13.8715px; opacity: 1.29903; z-index: 138; left: 178.957px; top: 210.04px;">temozolomide</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'drug' %}?drug=Epirubicin" style="color: rgb(191, 24, 139); font-size: 12.3448px; opacity: 1.20351; z-index: 123; left: 245.663px; top: 104.298px;">Epirubicin</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'drug' %}?drug=vincristine" style="color: rgb(146, 230, 217); font-size: 9.15392px; opacity: 0.90097; z-index: 91; left: 210.773px; top: 25.0859px;">vincristine</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'drug' %}?drug=doxorubicin" style="color: rgb(29, 199, 127); font-size: 7.57082px; opacity: 0.656221; z-index: 75; left: 106.37px; top: 26.7527px;">doxorubicin</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'drug' %}?drug=cisplatin" style="color: rgb(189, 227, 96); font-size: 7.72705px; opacity: 0.684834; z-index: 77; left: 20.4237px; top: 100.223px;">cisplatin</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'cancer' %}?cancer=acute%20lymphoblastic%20leukemia" style="color: rgb(64, 181, 75); font-size: 9.95594px; opacity: 0.995259; z-index: 99; left: -64.7177px; top: 180.646px;">acute lymphoblastic leukemia</a>
+                                                <a class="tag" target="main" href="{% url 'search_result' 'cancer' %}?cancer=bladder%20cancer" style="color: rgb(9, 28, 147); font-size: 15.1902px; opacity: 1.36609; z-index: 151; left: 26.4295px; top: 191.713px;">bladder cancer</a>
+                                                <a class="tag" target="main" href="{% url 'search_result' 'cancer' %}?cancer=glioma" style="color: rgb(19, 67, 77); font-size: 18.5965px; opacity: 1.49528; z-index: 185; left: 134.273px; top: 111.181px;">glioma</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'cancer' %}?cancer=lung%20cancer" style="color: rgb(145, 134, 189); font-size: 13.4583px; opacity: 1.27532; z-index: 134; left: 137.089px; top: 13.2513px;">lung cancer</a>
+                                                <a class="tag" target="main" href="{% url 'search_result' 'cancer' %}?cancer=leukemia" style="color: rgb(108, 80, 156); font-size: 10.2106px; opacity: 1.0221; z-index: 102; left: 56.4856px; top: 5.78804px;">leukemia</a>
+												<a class="tag" target="main" href="{% url 'search_result' 'cancer' %}?cancer=breast%20cancer" style="color: rgb(68, 135, 134); font-size: 12.9738px; opacity: 1.24559; z-index: 129; left: -5.18211px; top: 82.0983px;">breast cancer</a>
+											</div>
+										</center></td>
+								</tr>
+							</tbody></table>
+						</div></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	<script type="text/javascript" src="/static/index/home.js"></script>
+	<script type="text/javascript" src="/static/index/jquery.js"></script>
+	<script type="text/javascript" src="/static/index/image_fade.js"></script>
+
+</body></html>
